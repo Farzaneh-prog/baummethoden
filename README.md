@@ -12,3 +12,8 @@
 -activate python environment: 'source .venv/bin/activate'
 -install requirements: 'pip install -r baummethoden/requirements.txt'
 -pip freeze output goes to requirements.txt: 'pip freeze > baummethoden/requirements.txt'
+
+
+## Daten importieren
+
+- data are stored already in 'Data/row'
