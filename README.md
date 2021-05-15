@@ -17,3 +17,6 @@
 ## Daten importieren
 
 - data are stored already in 'Data/row'
+
+## Model
+- Model trainieren und mit train.py im Terminal ausführen
