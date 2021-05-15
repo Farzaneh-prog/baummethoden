@@ -23,3 +23,8 @@
 
 ## Model speichern als pickle file
 - trainierte Model ist in der models Ordner als eine Binäre Data gespeichert
+
+## Prediction
+- Modell im predict.py file laden und im Terminal ausführen und die Ergebnisse im reports speichern als xlsx
+
+## update requirements
