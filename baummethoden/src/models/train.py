@@ -3,6 +3,7 @@ from sklearn.tree import DecisionTreeClassifier
 from subprocess import check_call, check_output
 
 import pandas as pd
+import pickle as pi
 
 current_dir = 'baummethoden'
 sys.path.append('../../src/features/')
@@ -42,3 +43,15 @@ classifier.feature_importances_
 
 #graphical output
 Baum_tree(classifier, attribute_names)
+
+#save in Pickle file
+path_start = os.getcwd()
+pathr = os.path.dirname(os.getcwd())+'/../models'
+os.chdir(pathr)
+file_name = "classification_model.pickle"
+fill = open(file_name,'wb')     #allow to Write the file in a Binary format
+pi.dump(classifier,fill)
+fill.close()
+
+#change to the start working directory
+os.chdir(path_start)

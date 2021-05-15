@@ -20,3 +20,6 @@
 
 ## Model
 - Model trainieren und mit train.py im Terminal ausführen
+
+## Model speichern als pickle file
+- trainierte Model ist in der models Ordner als eine Binäre Data gespeichert
