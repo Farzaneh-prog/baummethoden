@@ -7,7 +7,7 @@ import pickle as pi
 
 current_dir = 'baummethoden'
 #sys.path.append('../../src/features/')
-sys.path.append('../src/features/')
+sys.path.append('../baummethoden/src/features/')
 import build_features
 from build_features import *
 direct = check_output('pwd')
