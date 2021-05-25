@@ -1,0 +1,13 @@
+name: train-model
+on: [pull-request]
+jobs:
+    train-model:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: set up python
+          uses: actions/setup-python@v2
+          with:
+            python-version: '3.8.5'
+        - name: Get python version
+          run: python -V
