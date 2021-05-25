@@ -13,3 +13,11 @@ jobs:
           run: pip install -r baummethoden/requirements.txt
         - name: Train model
           run: python baummethoden/src/models/train.py
+
+        - name: Archive production artifacts
+          uses: actions/upload-artifact@v2
+          with:
+            name: baummethoden_model.pickle
+            path: models/baummethoden.pickle 
+
+          
