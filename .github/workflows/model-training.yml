@@ -10,6 +10,6 @@ jobs:
           with:
             python-version: '3.8'
         - name: Install dependencies
-          run: pip install -r /baummethoden/requirements.txt
+          run: pip3 install -r baummethoden/requirements.txt
         - name: Train model
           run: python baummethoden/src/models/train.py
