@@ -1,5 +1,5 @@
 name: train-model
-on: [pull-request]
+on: [pull_request]
 jobs:
     train-model:
       runs-on: ubuntu-latest
@@ -8,6 +8,8 @@ jobs:
         - name: set up python
           uses: actions/setup-python@v2
           with:
-            python-version: '3.8.5'
-        - name: Get python version
-          run: python -V
+            python-version: '3.8'
+        - name: Install dependencies
+          run: pip install -r baummethoden/requirements.txt
+        - name: Train model
+          run: python baummethoden/src/models/train.py
