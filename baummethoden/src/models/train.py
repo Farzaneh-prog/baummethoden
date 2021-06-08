@@ -6,7 +6,7 @@ import pandas as pd
 import pickle as pi
 
 current_dir = 'baummethoden'
-sys.path.append('../features/')
+sys.path.append('baummethoden/src/features/')
 #sys.path.append('/home/farzaneh/DataScientist/LearnPython/Baummethoden/baummethoden/src/features/build_features.py')
 import build_features
 from build_features import *

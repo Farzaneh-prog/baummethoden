@@ -12,9 +12,10 @@ jobs:
         - name: Install dependencies
           run: pip install -r baummethoden/requirements.txt
         - name: Train model
+          #inputs:
+
           run: python baummethoden/src/models/train.py
-          with:
-            path:  baummethoden/src/features/build_features.py
+          
 #name: 'Example'
 #description: 'Receives file and generates output'
 #inputs:
