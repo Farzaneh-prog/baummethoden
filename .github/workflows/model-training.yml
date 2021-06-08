@@ -31,6 +31,6 @@ jobs:
           uses: actions/upload-artifact@v2
           with:
             name: baummethoden_model.pickle
-            path: models/baummethoden.pickle 
+            path: baummethoden/models/baummethoden.pickle 
 
           
