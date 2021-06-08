@@ -6,8 +6,11 @@ def Baum_tree(classifier, attribute_names):
     
     #change the working directory
     path_start = os.getcwd()
-    pathr=os.path.dirname(os.getcwd())+'/../reports/figures'
-    os.chdir(pathr)
+    pathr='baummethoden/reports/figures'
+#    pathr=os.path.dirname(os.getcwd())+'/../reports/figures'
+
+ #   os.chdir(pathr)
+    os.chdir(pathr) 
     export_graphviz(classifier, out_file=("tree_bills.dot"), feature_names=attribute_names[0:4],class_names=(['real','fake']), rounded=True, filled=True)
     os.system("dot -Tpng tree_bills.dot -o tree_bills.png") 
     os.system("dot -Tps tree_bills.dot -o tree_bills.ps")
