@@ -6,7 +6,7 @@ def Baum_tree(classifier, attribute_names):
     
     #change the working directory
     path_start = os.getcwd()
-    pathr=os.path.dirname(os.getcwd())+'baummethoden/reports/figures'
+    pathr=os.path.dirname(os.getcwd())+'/reports/figures'
 #    pathr=os.path.dirname(os.getcwd())+'/../reports/figures'
 
     os.chdir(pathr)
