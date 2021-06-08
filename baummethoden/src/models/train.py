@@ -25,7 +25,8 @@ attribute_names = ['variance_wavelet_transformed_image', 'skewness_wavelet_trans
 
 #Read csv-file
 #data = pd.read_csv('/home/farzaneh/DataScientist/LearnPython/Baummethoden/baummethoden/data/processed/data_banknote_authentication.csv', names=attribute_names)
-data = pd.read_csv('../../../'+current_dir+'/data/processed/data_banknote_authentication.csv', names=attribute_names)
+#data = pd.read_csv('../../../'+current_dir+'/data/processed/data_banknote_authentication.csv', names=attribute_names)
+data = pd.read_csv(current_dir+'/data/processed/data_banknote_authentication.csv', names=attribute_names)
 
 #preparing data for modelling
 preprocessor = Preprocessor(data)
@@ -49,7 +50,8 @@ Baum_tree(classifier, attribute_names)
 
 #save in Pickle file
 path_start = os.getcwd()
-pathr = os.path.dirname(os.getcwd())+'/../models'
+#pathr = os.path.dirname(os.getcwd())+'/../models'
+pathr = os.path.dirname(os.getcwd())+'baummethoden/models'
 os.chdir(pathr)
 file_name = "classification_model.pickle"
 fill = open(file_name,'wb')     #allow to Write the file in a Binary format
