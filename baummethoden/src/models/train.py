@@ -49,8 +49,8 @@ classifier.feature_importances_
 Baum_tree(classifier, attribute_names)
 
 #save in Pickle file
-#path_start = os.getcwd()
-path_start = 'baummethoden/src/models'
+path_start = os.getcwd()
+
 #pathr = os.path.dirname(os.getcwd())+'/../models'
 pathr = 'baummethoden/models'
 os.chdir(pathr)
