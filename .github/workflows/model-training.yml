@@ -4,6 +4,7 @@ jobs:
     train-model:
       runs-on: ubuntu-latest
 
+      ##das ist der zweite Methode, anstelle davon kann den Zeile mit # verwenden, das geht davon raus das BAUMMETHODEN der working directory ist.
       defaults:
         run:
           working-directory: baummethoden/src/models/
