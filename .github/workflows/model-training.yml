@@ -1,0 +1,36 @@
+name: train-model
+on: [pull_request]
+jobs:
+    train-model:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: set up python
+          uses: actions/setup-python@v2
+          with:
+            python-version: '3.8'
+        - name: Install dependencies
+          run: pip install -r baummethoden/requirements.txt
+        - name: Train model
+          #inputs:
+
+          run: python baummethoden/src/models/train.py
+          
+#name: 'Example'
+#description: 'Receives file and generates output'
+#inputs:
+#  file-path:  # id of input
+ #   description: "Path to test script"
+  #  required: true
+   # default: 'test-file.js'
+#outputs:
+ # results-file: # id of output
+  #  description: "Path to results file"
+    
+        - name: Archive production artifacts
+          uses: actions/upload-artifact@v2
+          with:
+            name: baummethoden_model.pickle
+            path: models/baummethoden.pickle 
+
+          
