@@ -6,15 +6,15 @@ import pandas as pd
 import pickle as pi
 
 current_dir = 'baummethoden'
-#sys.path.append('../features/')
-sys.path.append('baummethoden/src/features/')
+sys.path.append('../features/')
+##sys.path.append('baummethoden/src/features/')
 #sys.path.append('/home/farzaneh/DataScientist/LearnPython/Baummethoden/baummethoden/src/features/build_features.py')
 import build_features
 from build_features import *
 direct = check_output('pwd')
 print(direct)
-sys.path.append('baummethoden/src/visualization/')
-#sys.path.append('../../src/visualization/')
+##sys.path.append('baummethoden/src/visualization/')
+sys.path.append('../../src/visualization/')
 #check_call('pwd')
 import visualize
 from visualize import *
@@ -25,8 +25,8 @@ attribute_names = ['variance_wavelet_transformed_image', 'skewness_wavelet_trans
 
 #Read csv-file
 #data = pd.read_csv('/home/farzaneh/DataScientist/LearnPython/Baummethoden/baummethoden/data/processed/data_banknote_authentication.csv', names=attribute_names)
-#data = pd.read_csv('../../../'+current_dir+'/data/processed/data_banknote_authentication.csv', names=attribute_names)
-data = pd.read_csv(current_dir+'/data/processed/data_banknote_authentication.csv', names=attribute_names)
+data = pd.read_csv('../../../'+current_dir+'/data/processed/data_banknote_authentication.csv', names=attribute_names)
+##data = pd.read_csv(current_dir+'/data/processed/data_banknote_authentication.csv', names=attribute_names)
 
 #preparing data for modelling
 preprocessor = Preprocessor(data)
@@ -51,8 +51,8 @@ Baum_tree(classifier, attribute_names)
 #save in Pickle file
 path_start = os.getcwd()
 
-#pathr = os.path.dirname(os.getcwd())+'/../models'
-pathr = 'baummethoden/models'
+pathr = os.path.dirname(os.getcwd())+'/../models'
+##pathr = 'baummethoden/models'
 os.chdir(pathr)
 file_name = "classification_model.pickle"
 fill = open(file_name,'wb')     #allow to Write the file in a Binary format
