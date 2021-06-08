@@ -16,14 +16,17 @@ jobs:
             python-version: '3.8.5'
 
         - name: Install dependencies
-          run: pip install -r baummethoden/requirements.txt
+          run: pip install -r ../../requirements.
+          #run: pip install -r baummethoden/requirements.txt
         - name: Train model
-          run: python baummethoden/src/models/train.py
-    
+          #run: python baummethoden/src/models/train.py
+          run: python train.py
+
         - name: Archive production artifacts
           uses: actions/upload-artifact@v2
           with:
             name: classification_model.pickle
-            path: baummethoden/models/classification_model.pickle 
+            #path: baummethoden/models/classification_model.pickle 
+            path: ../../models/classification_model.pickle 
 
           
