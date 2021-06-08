@@ -2,7 +2,7 @@ name: train-model
 on: [pull_request]
 jobs:
     train-model:
-      runs-on: windows-latest
+      runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
         - name: set up python
@@ -13,7 +13,8 @@ jobs:
           run: pip install -r baummethoden/requirements.txt
         - name: Train model
           run: python baummethoden/src/models/train.py
-
+          with:
+            path:  baummethoden/src/features/build_features.py
 #name: 'Example'
 #description: 'Receives file and generates output'
 #inputs:
